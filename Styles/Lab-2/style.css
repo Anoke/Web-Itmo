@@ -1,0 +1,135 @@
+body{
+    font-size: 1rem;
+    line-height: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-align: left;
+    background: none;
+    color: black;
+    text-indent: unset;
+    word-spacing: 0.4rem;
+    letter-spacing: 0.05rem;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
+header{
+    min-width: 500px;
+    max-width: 100%;
+}
+
+
+
+.header-menu__basic-info{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header-menu {
+    border-radius: 40px 40px 0 0;
+    background-color: #423841;
+
+}
+.header-menu__basic-info{
+    justify-items: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 200px; /* Высота контейнера, можно задать любую */
+}
+.header-menu__site-navigation{
+    justify-items: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 200px; /* Высота контейнера, можно задать любую */
+}
+article {
+    background-color: antiquewhite;
+    border: 1px dashed red;
+    padding: 16px 32px;
+    margin: 16px 32px 24px 40px;
+    box-shadow: 5px 5px 10px #888888;
+    justify-content: center; /* Горизонтальное*/
+    align-items: center; /* Вертикальное*/
+
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+.header-menu__basic-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 колонки с одинаковой шириной */
+    grid-gap: 10px; /* Промежуток между ячейками */
+}
+
+.header-menu__site-navigation{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 3 колонки с одинаковой шириной */
+    grid-gap: 10px; /* Промежуток между ячейками */
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #8d1111;
+}
+img{
+    max-width: 100%;
+    width: auto;
+    margin: 0 0 5px 0;
+}
+.header-menu__basic-info__logo__img{
+    max-width: 75%;
+    height: auto;
+}
+@media screen and (max-width: 900px) {
+    img{
+        max-width: 215px;
+        height: auto;
+    }
+    header{
+        min-width: 50%
+    }
+
+    form{
+        top: 0;
+        right: 0;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ff0000;
+    }
+    .header-menu__basic-info__logo__img{
+        max-width: 215px;
+        height: auto;
+    }
+    .form{
+        position: fixed;
+    }
+}
+@media screen and (max-width: 500px) {
+    img{
+        max-width: 100px;
+        height: auto;
+    }
+    header{
+        min-width: 25%
+    }
+
+    .header-menu__basic-info__registration-entry{
+        display: block;
+        font-size: 0.87rem;
+    }
+    form{
+        display: none;
+    }
+    .header-menu__basic-info__logo__img{
+        max-width: 150px;
+        height: auto;
+    }
+}
+
