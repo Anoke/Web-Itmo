@@ -17,9 +17,15 @@ body{
 header{
     min-width: 500px;
     max-width: 100%;
+    text-decoration: aliceblue;
+    background-color: transparent;
+    background-image: url("https://img.freepik.com/premium-vector/fizzy-drink-background-beer-or-cola-texture-sparkling-carbonated-beverage-pattern_254622-276.jpg");
+    background-size: cover;
 }
 
-
+header a{
+    color: aliceblue;
+}
 
 .header-menu__basic-info{
     list-style-type: none;
@@ -51,7 +57,10 @@ article {
     box-shadow: 5px 5px 10px #888888;
     justify-content: center; /* Горизонтальное*/
     align-items: center; /* Вертикальное*/
-
+    display: flex;
+}
+article a{
+    text-align: center;
 }
 
 section {
@@ -76,12 +85,16 @@ a{
 }
 
 a:visited{
-    color: #8d1111;
+    color: aliceblue;
 }
 img{
     max-width: 100%;
     width: auto;
     margin: 0 0 5px 0;
+    justify-content: center;
+}
+.main-nav__drink-navigation__drinks__beer img{
+    height: 80%;
 }
 .header-menu__basic-info__logo__img{
     max-width: 75%;
@@ -132,4 +145,34 @@ img{
         height: auto;
     }
 }
+.table-container {
+    display: grid;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.custom-table thead {
+    background-color: #c300ff;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: rgba(18, 90, 190, 0.54);
+}
+
+.custom-table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 0, 0, 0.65);
+}
+
+
 
