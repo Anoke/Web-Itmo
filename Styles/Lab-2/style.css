@@ -37,7 +37,6 @@ header a{
 .header-menu {
     border-radius: 40px 40px 0 0;
     background-color: #423841;
-
 }
 .header-menu__basic-info{
     justify-items: center; /* Центрирование по горизонтали */
@@ -66,6 +65,7 @@ article a{
 section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /*grid-template-columns: 1fr 1fr 1fr;*/
     grid-gap: 20px;
 }
 .header-menu__basic-info{
@@ -144,6 +144,22 @@ img{
         max-width: 150px;
         height: auto;
     }
+    /*.main-nav__drink-navigation__drinks__beer{*/
+    /*    grid-area: s;*/
+    /*}*/
+    /*.main-nav__drink-navigation__drinks__energy-drinks{*/
+    /*    grid-area: ee;*/
+    /*}*/
+    /*.main-nav__drink-navigation__drinks__water{*/
+    /*    grid-area: w;*/
+    /*}*/
+    /*section{*/
+    /*    grid-template-columns: 1fr 1fr;*/
+    /*    grid-template-rows: 1fr;*/
+    /*    grid-template-areas:*/
+    /*            "s ee"*/
+    /*            "w";*/
+    /*}*/
 }
 .table-container {
     display: grid;
