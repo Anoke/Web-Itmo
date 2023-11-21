@@ -221,9 +221,12 @@ article{
 }
 
 
+
+
 .custom-table {
+    display: grid;
+    grid-template-columns: minmax(150px, 1.33fr) minmax(150px, 2.33fr) minmax(150px, 2.33fr);
     width: 100%;
-    border-collapse: collapse;
 }
 
 .custom-table th, .custom-table td {
@@ -231,16 +234,19 @@ article{
     padding: 10px;
     text-align: center;
 }
+thead, tbody, tr{
+    display: contents;
+}
 
 .custom-table thead {
     background-color: #c300ff;
 }
 
-.custom-table tbody tr:nth-child(even) {
+tbody tr:nth-child(even) td {
     background-color: rgba(18, 90, 190, 0.54);
 }
 
-.custom-table tbody tr:nth-child(odd) {
+tbody tr:nth-child(odd) td{
     background-color: rgba(255, 0, 0, 0.65);
 }
 
