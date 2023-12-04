@@ -57,7 +57,8 @@ a:visited{
 }
 .header-menu__basic-info li:hover, .header-menu__middle li:hover, .header-menu__site-navigation li:hover {
     border-radius: 15%;
-    background: #777;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
 }
 body main{
     color: darkturquoise;
@@ -88,7 +89,7 @@ footer a{
     display: flex;
     justify-content: center;
 }
-.main-nav__drink-navigation__drinks img{
+.main__section img{
     object-fit: cover;
     height: 370px;
     width: 80%;
@@ -113,7 +114,7 @@ main{
 /*    align-items: center;*/
 /*    flex-direction: column;*/
 /*}*/
-.main-nav__drink-navigation__drinks{
+.main__section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +129,7 @@ article a {
     justify-content: center;
     align-items: center;
 }
-.main-nav__drink-navigation__drinks__energy-drinks{
+.main__section__energy{
     flex-shrink: 2;
     justify-content: center;
 }
@@ -264,5 +265,140 @@ tbody tr:nth-child(odd) td{
 }
 .active{
     border-radius: 15%;
-    background: #777;
+    background: rgba(255, 255, 255, 0.2);
+}
+.main__container{
+    display: flex;
+    justify-content: space-around;
+}
+.main__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 200px;
+}
+/*.main__nav__title, .main__nav__content li{*/
+/*    display: block;*/
+/*    color: rgba(255, 255, 255, 0.8);*/
+/*    text-align: center;*/
+/*    padding: 20px 30px;*/
+/*    text-decoration: none;*/
+/*    margin: 0 0 1px 0;*/
+/*    border-radius: 5%;*/
+/*}*/
+/*.main__nav__title {*/
+/*    padding: 0 15px;*/
+/*}*/
+
+/*.main__nav__content li {*/
+/*    padding: 0 15px;*/
+/*}*/
+.main__nav ul, .main__nav__title{
+    background: rgba(255, 255, 255, 0.4);
+    width: 200px;
+}
+.main__nav ul li{
+    box-sizing: border-box;
+    border: 1px #1F5768 solid;
+    border-radius: 15%;
+}
+.main__nav ul li:hover{
+    background: rgba(255, 255, 255, 0.45);
+    box-sizing: border-box;
+    border: 1px #1F5768 solid;
+}
+.main__nav{
+    margin: 20px;
+}
+.main__aside__search__label__input{
+    width: 200px;
+}
+.header-menu__middle ul li a {
+    padding: 10px 30px;
+}
+
+
+
+
+/*form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    max-width: 300px;*/
+/*}*/
+
+/*label {*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+/*input, select, button {*/
+/*    margin-bottom: 10px;*/
+/*    padding: 5px;*/
+/*}*/
+
+/*#resultContainer {*/
+/*    margin-top: 20px;*/
+/*    border: 1px solid #ccc;*/
+/*    padding: 10px;*/
+/*}*/
+/* Добавленные стили для категоризации */
+/* Добавленные стили для категоризации */
+/* Добавленные стили для категоризации */
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.deleteButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#categories, #noteForm{
+    margin-top: 10px;
+}
+
+.main__form, #noteList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#noteForm > .header-menu__search__search-bar__label__input{
+    width: 70vw;
+}
+#noteForm button {
+    height: 51.45px;
+    padding: 8px 16px;
+    background-color: #43a047;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#noteForm button:hover {
+    background-color: #3f9142;
+}
+#noteList li {
+    height: 51.45px;
+    padding: 8px 16px;
+    background-color: #43a047;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: default;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
 }
