@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="Lab-2/lab2.css">
     <script src="../Scripts/script.js"></script>
     <script src="../Scripts/active-page.js"></script>
+    <script src="../Scripts/UserData.js"></script>
 </head>
 <body>
 <header class="header-menu">
@@ -113,9 +114,22 @@
     <a href="#top" id="scrollToTopBtn">
         <?xml version="1.0" encoding="UTF-8"?><svg width="40px" height="40px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     </a>
+
+    <div class="preloader"></div>
+    <div id="userProfile">
+        <h2>User Profile</h2>
+        <div id="userData"></div>
+    </div>
+    <template id="userTemplate">
+        <div class="user">
+            <h3 class="user-name"></h3>
+            <p><strong>Email:</strong> <span class="user-email"></span></p>
+            <p><strong>Address:</strong> <span class="user-address"></span></p>
+            <p><strong>Phone:</strong> <span class="user-phone"></span></p>
+            <hr>
+        </div>
+    </template>
     <pre>
-
-
 
 
 
