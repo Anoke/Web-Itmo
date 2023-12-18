@@ -8,6 +8,7 @@
     <title>
         Главная страница
     </title>
+    <link rel="stylesheet" href="../../Styles/modals.css">
     <!--    <link rel="stylesheet" href="../../Styles/Lab-2/style.css">-->
     <link rel="shortcut icon" href="../../Photos/pngwing.com.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +17,10 @@
     <link rel="stylesheet" href="lab2.css">
     <script src="../../Scripts/script.js"></script>
     <script src="../../Scripts/active-page.js"></script>
+    <script src="../../Scripts/modals.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="../../Scripts/typeahead.js"></script>
 </head>
 <body>
 <header class="header-menu">
@@ -50,7 +55,11 @@
                     <a href="../contacts.html">Контакты</a>
                 </li>
                 <li class="header-menu__basic-info__registration-entry">
-                    <a href="../registration.html">
+                    <!--                    <a href="../registration.html">-->
+<!--                    Ссылаемся на модальное окно, которое по дефолту скрыто, но когда переходим по ссылке, то вскрывается модальное окно.
+                        По сути работает в основном css, но js добавляет приятные плюшки и устраняет некоторые проблемы:
+                         Совместимость с Internet Explorer 8 версии. При нажатии esc выходит из модального окна. Предотвращение прокрутки при открытом модальном окне-->
+                    <a href="#auth__modal-fade">
                         <?xml version="1.0" encoding="UTF-8"?><svg width="20px" height="20px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                         Кабинет
                     </a>
@@ -64,7 +73,6 @@
         </a>
         <form action="" method="post" class="header-menu__search__search-bar">
             <div class="header-menu__search__search-bar">
-                <label class="header-menu__search__search-bar__label__label" for="search"></label>
                 <input class="header-menu__search__search-bar__label__input" type="text" name="search" id="search" placeholder="Поиск товаров" value="">
             </div>
         </form>
@@ -114,37 +122,37 @@
         <?xml version="1.0" encoding="UTF-8"?><svg width="40px" height="40px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M12 21L12 3M12 3L20.5 11.5M12 3L3.5 11.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     </a>
     <div class="main__container">
-        <aside class="main__aside">
-            <nav class="main__nav">
-                <div class="main__nav__title">
-                    <a href="../catalog.html">Каталог</a>
-                </div>
-                <div class="main__nav__search">
-                    <form action="lab-2.html" method="get">
-                        <label>
-                            <input value="" type="search" placeholder="Поиск по названию" class="main__aside__search__label__input">
-                        </label>
-                    </form>
-                </div>
-                <ul class="main__nav__content">
-                    <li>
-                        <a href="#">
-                            Лимонады
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Энергетические напитки
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Вода
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+        <!--        <aside class="main__aside">-->
+        <!--            <nav class="main__nav">-->
+        <!--                <div class="main__nav__title">-->
+        <!--                    <a href="../catalog.html">Каталог</a>-->
+        <!--                </div>-->
+        <!--                <div class="main__nav__search">-->
+        <!--                    <form action="lab-2.html" method="get">-->
+        <!--                        <label>-->
+        <!--                            <input value="" type="search" placeholder="Поиск по названию" class="main__aside__search__label__input">-->
+        <!--                        </label>-->
+        <!--                    </form>-->
+        <!--                </div>-->
+        <!--                <ul class="main__nav__content">-->
+        <!--                    <li>-->
+        <!--                        <a href="#">-->
+        <!--                            Лимонады-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        <a href="#">-->
+        <!--                            Энергетические напитки-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                    <li>-->
+        <!--                        <a href="#">-->
+        <!--                            Вода-->
+        <!--                        </a>-->
+        <!--                    </li>-->
+        <!--                </ul>-->
+        <!--            </nav>-->
+        <!--        </aside>-->
         <nav>
             <section class="main__section">
                 <article class="main__section__lemonade">
@@ -168,6 +176,36 @@
             </section>
         </nav>
     </div>
+    <section class="modal--fade" id="auth__modal-fade" data-stackable="false"
+             tabindex="-1" role="dialog" aria-labelledby="label-fade" aria-hidden="true">
+
+        <div class="modal-inner">
+            <header><h2 id="label-fade">Вход в аккаунт</h2></header>
+            <div class="modal-content">
+                <div class="login-container">
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="username">Логин</label>
+                            <input type="text" id="username" name="username" placeholder="Введите ваш логин" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль</label>
+                            <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="remember-me" name="remember">
+                            <label for="remember-me">Запомнить меня</label>
+                        </div>
+                        <button type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <a href="#!" class="modal-close"
+           data-dismiss="modal" data-close="Close">&times;</a>
+    </section>
+
     <pre>
 
 
@@ -213,6 +251,7 @@
     </div>
     Время загрузки страницы:
     <div id="loadTime"></div>
+    <script charset="utf-8" src="../../Scripts/typeahead.js"></script>
 </footer>
 </body>
 </html>
