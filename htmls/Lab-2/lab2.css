@@ -84,9 +84,9 @@ footer{
 ul{
     list-style: none;
 }
-h1,h2,h3,h4,li{
-    margin: 0.63em;
-}
+/*h1,h2,h3,h4,li{*/
+/*    margin: 0.63em;*/
+/*}*/
 footer a{
     display: flex;
     justify-content: center;
@@ -383,7 +383,7 @@ tbody tr:nth-child(odd) td{
     width: 40px;
     height: 40px;
     animation: spin 1s linear infinite; /* Анимация вращения */
-    margin: 20px auto; /* Центрирование по горизонтали */
+    margin: auto; /* Центрирование по горизонтали */
 }
 
 /* Анимация вращения */
@@ -472,9 +472,6 @@ a.modal-close{
     margin-bottom: 15px;
 }
 
-label {
-    font-weight: bold;
-}
 
 .form-group input[type="text"],
 .form-group input[type="password"] {
@@ -484,7 +481,7 @@ label {
     border-radius: 4px;
 }
 
-button {
+button.login {
     width: 100%;
     padding: 10px;
     border: none;
@@ -495,7 +492,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+button.login:hover {
     background-color: #3f9142;
 }
 
@@ -534,4 +531,27 @@ button:hover {
     .tt-menu{
         width: 125px;
     }
+}
+#photoCatalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#toggleButton{
+    width: 100%;
+    background: #43a047;
+}
+#toggleButton:hover{
+    background: #3f9142;
 }
