@@ -15,11 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lab2.css">
-    <script src="../../Scripts/script.js"></script>
-    <script src="../../Scripts/active-page.js"></script>
-    <script src="../../Scripts/modals.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
+    <script src="../../Scripts/active-page.js"></script>
+    <script src="../../Scripts/script.js"></script>
+    <script src="../../Scripts/modals.js"></script>
     <script src="../../Scripts/typeahead.js"></script>
 </head>
 <body>
@@ -73,7 +74,7 @@
         </a>
         <form action="" method="post" class="header-menu__search__search-bar">
             <div class="header-menu__search__search-bar">
-                <input class="header-menu__search__search-bar__label__input" type="text" name="search" id="search" placeholder="Поиск товаров" value="">
+                <input class="header-menu__search__search-bar__label__input" type="text" name="search" id="search" placeholder="Поиск товаров" value="" autocomplete="off">
             </div>
         </form>
         <ul>
@@ -251,7 +252,7 @@
     </div>
     Время загрузки страницы:
     <div id="loadTime"></div>
-    <script charset="utf-8" src="../../Scripts/typeahead.js"></script>
+    <script src="../../Scripts/typeahead.js"></script>
 </footer>
 </body>
 </html>
